@@ -3,7 +3,7 @@ import BoxComponent from "./BoxComponent";
 import BoxPrint from "./BoxPrint";
 
 export default function App() {
-
+//Add useContext
   const [boxCount, setBoxCount] = useState(0);
 
   const handleBoxCount = (count) =>{
