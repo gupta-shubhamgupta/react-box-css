@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./BoxPrint.css";
+import BoxInputCount from "./store/app-store";
 
 export default function BoxPrint({ finalBoxCount }){
+    const boxNumber = useContext(BoxInputCount);
 
     // const boxes =  Array.from({length: finalBoxCount}).map((_, index) => (
     //     <tr key={index}>
@@ -16,7 +18,7 @@ export default function BoxPrint({ finalBoxCount }){
     //     </tr>
     // ));
     const boxes = [];
-    for(let i =0; i<finalBoxCount; i++){
+    for(let i =0; i<boxNumber.boxNumbereCount; i++){
         boxes.push(
             <tr key={i}>
                 <td>
